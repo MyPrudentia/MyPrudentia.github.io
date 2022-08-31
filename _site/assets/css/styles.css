@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Lora:ital@1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Code+Pro:ital@0;1&family=Uchen&display=swap");
+.container { padding: 0; }
+
+@keyframes shake { 10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); } }
+
+.underline { text-decoration: underline !important; }
+
+.btn, .btn:link, .btn:visited { text-transform: uppercase; text-decoration: none; padding-top: 10px; padding-bottom: 10px; padding-left: 25px; padding-right: 25px; display: inline-block; border-radius: 10rem; transition: all 0.2s; box-shadow: none; position: relative; font-size: 16px; border: none; cursor: pointer; }
+
+.btn:hover { transform: translateY(-3px); box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:hover::after { transform: scaleX(1.4) scaleY(1.6); opacity: 0; }
+
+.btn:focus, .btn:active { outline: none; transform: translateY(-1px); box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--white { background-color: #f6cbcb; color: #313131; }
+
+.btn--white::after { background-color: #f6cbcb; }
+
+.btn::after { content: ''; display: inline-block; height: 100%; width: 100%; border-radius: 10rem; position: absolute; top: 0; left: 0; z-index: -1; transition: all 0.35s; }
+
+.btn--animated { animation: moveInBottom 0.5s ease-out 0.5s; animation-fill-mode: backwards; }
+
+.about-prudentia-header { font-size: 85px; text-align: center; font-family: 'Montserrat', sans-serif; width: 100%; font-weight: 600; margin-bottom: 0; color: #e87777; margin-top: 0; top: 25%; }
+
+.about-prudentia-header:hover { animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
+
+.about-header { display: flex; justify-content: center; align-items: center; background: black; height: 250px; position: relative; }
+
+.about-heading-three { font-family: 'Montserrat', sans-serif; text-align: center; font-size: 45px; color: #ec9494; font-weight: bold 700; text-shadow: 0px 0px 0 #ce7676, 1px 1px 0 #b05858, 2px 2px 0 #913939, 3px 3px 0 #731b1b, 4px 4px 0 #550000; }
+
+.about-heading-three:hover { animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
+
+.navbar-left:visited, .navbar-left:link, .navbar-left:active, .navbar-left:hover { font-size: 42px; margin-left: 0px; color: #f6cbcb; vertical-align: middle; padding: 0px 15px; display: inline; text-decoration: none; margin-top: 5px; }
+
+.navbar, .navbar-inverse { margin-bottom: 0; }
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover { color: #f6cbcb; background-color: transparent; }
+
+.nav > li > a { padding: 40px 30px; }
+
+.nav-link { font-size: 24px; display: inline-block; position: relative; color: #f6cbcb; vertical-align: middle; }
+
+.nav-link:after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 4px; bottom: 0; border-radius: 100px; left: 0; background-color: #f6cbcb; transform-origin: bottom center; transition: transform 0.25s ease-out; }
+
+.nav-link:hover { color: #f6cbcb; }
+
+.nav-link:hover:after { transform: scaleX(1); transform-origin: bottom center; }
+
+.navbar-nav > li { padding-left: 25px; padding-right: 25px; }
+
+.navbar-nav > li > a:link, .navbar-nav > li > a:visited, .navbar-nav > li > a:hover { color: #f6cbcb; background-color: transparent; font-size: 28px; }
+
+.active { background: none; }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover { color: #f6cbcb; background-color: #cc2a2a; }
+
+.navbar-nav > li > a:hover { color: #f6cbcb; }
+
+.navbar-inverse .navbar-brand:link, .navbar-inverse .navbar-brand:visited { color: #f6cbcb; }
+
+.navbar { background-color: #e87777; padding: 0px 20px; }
+
+.navbar-nav li { padding: 0; }
+
+.logo-navbar { width: 60px; height: 90px; display: inline; }
+
+.con-about { background: white; padding: 0; }
+
+.about-heading-two { color: #e87777; text-align: center; font-size: 40px; font-weight: 600; font-family: 'Source Code Pro', monospace; text-transform: uppercase; }
+
+.about-heading-two:hover { animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
+
+.auto-type { color: #e87777; }
+
+.text-auto { color: #cc2a2a; }
+
+.about-header-con { background-image: url(/assets/images/background-about-two.jpg); background-size: cover; background-position: center; padding-top: calc(calc(100vh - 360px) / 2); padding-bottom: calc(calc(100vh - 360px) / 2); box-sizing: border-box; }
+
+.about-heading-three:after { background: none repeat scroll 0 0 #e87777; bottom: -10px; content: ''; display: block; height: 3px; border-radius: 100vw; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); position: relative; width: 140px; }
+
+.who-we-are { text-align: center; font-size: x-large; }
+
+.section-header { font-size: 30px; font-weight: 650; margin-top: 5rem; margin-bottom: 6.5rem; }
+
+.section-header:after { background: none repeat scroll 0 0 #931f31; bottom: -10px; content: ''; display: block; height: 3px; border-radius: 0.5px; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); position: relative; width: 7rem; }
+
+.btn-dark:hover, .btn-dark:focus, .btn-dark.focus, .btn-dark:active, .btn-dark.active, .open > .dropdown-toggle .btn-dark, .btn-dark:link, .btn-dark:visited, .btn-dark:hover { color: white; background-color: #171a1c; border-color: #131517; border-radius: 8px; font-weight: 700; margin-bottom: 7rem; }
+
+.btn:hover, .btn:focus, .btn.focus { color: white; background-color: black; text-decoration: none; }
+
+a:active, a:hover { outline: 0; }
+
+.btn-xl { padding: 15px 30px; }
+
+.btn-contact { margin-top: 2rem; }
+
+body { background-color: #f5f5f5; }
+
+.text-who-we-are { padding-right: 10rem; padding-left: 10rem; font-size: 20px; }
+
+/*# sourceMappingURL=styles.css.map */

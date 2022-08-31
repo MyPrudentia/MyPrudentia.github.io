@@ -1,0 +1,54 @@
+.about-prudentia-header {
+  font-size: 85px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: $primary-3;
+  margin-top: 0;
+  top: 25%;
+
+  &:hover {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  height: 250px;
+  position: relative;
+}
+
+.about-heading-three {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 45px;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(131, 58, 180, 1) 0%,
+  //   rgba(253, 29, 29, 1) 50%,
+  //   rgba(252, 176, 69, 1) 100%
+  // );
+  // color: transparent;
+  // -webkit-background-clip: text;
+  // background-clip: text;
+  color: $primary-2;
+  font-weight: bold 700;
+  text-shadow: 0px 0px 0 rgb(206, 118, 118), 1px 1px 0 rgb(176, 88, 88),
+    2px 2px 0 rgb(145, 57, 57), 3px 3px 0 rgb(115, 27, 27),
+    4px 4px 0 rgb(85, -3, 0);
+
+  &:hover {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}

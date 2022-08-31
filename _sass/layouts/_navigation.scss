@@ -1,0 +1,107 @@
+.navbar-left:visited,
+.navbar-left:link,
+.navbar-left:active,
+.navbar-left:hover {
+  font-size: 42px;
+  margin-left: 0px;
+  color: $primary-1;
+  vertical-align: middle;
+  padding: 0px 15px;
+  display: inline;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.navbar,
+.navbar-inverse {
+  margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: $primary-1;
+  background-color: transparent;
+}
+
+.nav > li > a {
+  padding: 40px 30px;
+}
+
+.nav-link {
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  color: $primary-1;
+  vertical-align: middle;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    border-radius: 100px;
+    left: 0;
+    background-color: $primary-1;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover {
+    color: $primary-1;
+
+    &:after {
+      transform: scaleX(1);
+      transform-origin: bottom center;
+    }
+  }
+}
+
+.navbar-nav > li {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.navbar-nav > li > a:link,
+.navbar-nav > li > a:visited,
+.navbar-nav > li > a:hover {
+  color: $primary-1;
+  background-color: transparent;
+  font-size: 28px;
+}
+
+.active {
+  background: none;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  color: $primary-1;
+  background-color: $primary-4;
+}
+
+.navbar-nav > li > a:hover {
+  color: $primary-1;
+}
+
+.navbar-inverse .navbar-brand:link,
+.navbar-inverse .navbar-brand:visited {
+  color: $primary-1;
+}
+
+.navbar {
+  background-color: $primary-3;
+  padding: 0px 20px;
+
+  &-nav li {
+    padding: 0;
+  }
+}
+
+.logo-navbar {
+  width: 60px;
+  height: 90px;
+  display: inline;
+}
