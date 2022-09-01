@@ -161,8 +161,8 @@ body {
 }
 
 .con-about-carousel {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .con-white {
@@ -184,4 +184,31 @@ body {
     -webkit-transform: scale(1.04); /* Safari and Chrome */
     -o-transform: scale(1.04); /* Opera */
   }
+}
+
+.subject-header {
+  margin: 0;
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+
+  &:after {
+    background: none repeat scroll 0 0 #931f31;
+    bottom: -10px;
+    content: '';
+    display: block;
+    height: 4px;
+    border-radius: 100vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: relative;
+    width: 120px;
+  }
+}
+
+.carousel-header {
+  color: darken($primary-2, 20%);
 }

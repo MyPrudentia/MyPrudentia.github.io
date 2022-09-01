@@ -84,8 +84,22 @@
       </div>
     </div>
   </div>
+  <div class="con-pink">
+    <h3 class="subject-header">Our Subjects</h3>
+  </div>
   <div class="con-pink con-about-carousel">
-    <div class="about-carousel">
+    <h4 class="carousel-header text-muted">Computer Science</h4>
+    <div class="about-carousel-cs">
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+    </div>
+  </div>
+  <div class="con-pink con-about-carousel">
+    <h4 class="carousel-header text-muted">Finances</h4>
+    <div class="about-carousel-f">
       <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
       <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
       <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
@@ -97,7 +111,14 @@
 
 <!-- Flickity.js -->
 <script type="text/javascript">
-  $('.about-carousel').flickity({
+  $('.about-carousel-cs').flickity({
+    // Options
+    cellAlign: 'left',
+    wrapAround: true,
+    freeScroll: true,
+  });
+
+  $('.about-carousel-f').flickity({
     // Options
     cellAlign: 'left',
     wrapAround: true,
@@ -111,16 +132,18 @@
     reset: true,
     distance: '60px',
     duration: 2500,
-    delay: 400
+    delay: 300,
   })
 
-  ScrollReveal().reveal('.header-text', { delay: 450, origin: 'top'})
-  ScrollReveal().reveal('.section-header, .btn-wwa, .btn-contact, .text-who-we-are', { delay: 450, origin: 'top'})
-  ScrollReveal().reveal('.who-we-are-image', { delay: 450, origin: 'top'})
-  ScrollReveal().reveal('.previous', { delay: 450, origin: 'right', disctance: '45px'})
-  ScrollReveal().reveal('.next', { delay: 450, origin: 'left', distance: '45px'})
-  ScrollReveal().reveal('.flickity-page-dots', { delay: 450, origin: 'bottom', distance: '65px'})
-  ScrollReveal().reveal('.cell', { delay: 450, origin: 'bottom', distance: '45px'})
+  ScrollReveal().reveal('.header-text', { delay: 350, origin: 'top'})
+  ScrollReveal().reveal('.section-header, .btn-wwa, .btn-contact, .text-who-we-are', { delay: 350, origin: 'top'})
+  ScrollReveal().reveal('.carousel-header', { delay: 350, origin: 'left', distance: '40px'})
+  ScrollReveal().reveal('.subject-header', { delay: 350, origin: 'left', distance: '40px'})
+  ScrollReveal().reveal('.who-we-are-image', { delay: 450, origin: 'top', distance: '20px'})
+  ScrollReveal().reveal('.previous', { delay: 350, origin: 'right', disctance: '45px'})
+  ScrollReveal().reveal('.next', { delay: 350, origin: 'left', distance: '45px'})
+  ScrollReveal().reveal('.flickity-page-dots', { delay: 350, origin: 'bottom', distance: '65px'})
+  // ScrollReveal().reveal('.cell', { delay: 350, origin: 'bottom', distance: '45px'})
 
 </script>
 
