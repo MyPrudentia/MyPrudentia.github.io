@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Lora:ital@1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Code+Pro:ital@0;1&family=Uchen&display=swap");
-.container { padding: 0; }
-
 @keyframes shake { 10%, 90% { transform: translate3d(-1px, 0, 0); }
   20%, 80% { transform: translate3d(2px, 0, 0); }
   30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
   40%, 60% { transform: translate3d(4px, 0, 0); } }
 
+.container { padding: 0; }
+
+* { margin: 0; padding: 0; }
+
 .underline { text-decoration: underline !important; }
+
+.image-wrapper { overflow: hidden !important; }
 
 .btn, .btn:link, .btn:visited { text-transform: uppercase; text-decoration: none; padding-top: 10px; padding-bottom: 10px; padding-left: 25px; padding-right: 25px; display: inline-block; border-radius: 10rem; transition: all 0.2s; box-shadow: none; position: relative; font-size: 16px; border: none; cursor: pointer; }
 
@@ -24,15 +28,21 @@
 
 .btn--animated { animation: moveInBottom 0.5s ease-out 0.5s; animation-fill-mode: backwards; }
 
+.cell { width: 33%; height: 350px; margin: 0 15px; overflow: hidden; border-radius: 8px; }
+
+.cell img { width: 100%; height: 350px; object-fit: cover; transition: all 0.4s ease; vertical-align: middle; }
+
+.cell img:hover { transform: scale(1.2); -ms-transform: scale(1.2); /* IE 9 */ -moz-transform: scale(1.2); /* Firefox */ -webkit-transform: scale(1.2); /* Safari and Chrome */ -o-transform: scale(1.2); /* Opera */ }
+
 .about-prudentia-header { font-size: 85px; text-align: center; font-family: 'Montserrat', sans-serif; width: 100%; font-weight: 600; margin-bottom: 0; color: #e87777; margin-top: 0; top: 25%; }
 
-.about-prudentia-header:hover { animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
+.about-prudentia-header:hover { transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
 
 .about-header { display: flex; justify-content: center; align-items: center; background: black; height: 250px; position: relative; }
 
 .about-heading-three { font-family: 'Montserrat', sans-serif; text-align: center; font-size: 45px; color: #ec9494; font-weight: bold 700; text-shadow: 0px 0px 0 #ce7676, 1px 1px 0 #b05858, 2px 2px 0 #913939, 3px 3px 0 #731b1b, 4px 4px 0 #550000; }
 
-.about-heading-three:hover { animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
+.about-heading-three:hover { transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
 
 .navbar-left:visited, .navbar-left:link, .navbar-left:active, .navbar-left:hover { font-size: 42px; margin-left: 0px; color: #f6cbcb; vertical-align: middle; padding: 0px 15px; display: inline; text-decoration: none; margin-top: 5px; }
 
@@ -72,7 +82,7 @@
 
 .about-heading-two { color: #e87777; text-align: center; font-size: 40px; font-weight: 600; font-family: 'Source Code Pro', monospace; text-transform: uppercase; }
 
-.about-heading-two:hover { animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
+.about-heading-two:hover { transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px; }
 
 .auto-type { color: #e87777; }
 
@@ -90,7 +100,11 @@
 
 .btn-dark:hover, .btn-dark:focus, .btn-dark.focus, .btn-dark:active, .btn-dark.active, .open > .dropdown-toggle .btn-dark, .btn-dark:link, .btn-dark:visited, .btn-dark:hover { color: white; background-color: #171a1c; border-color: #131517; border-radius: 8px; font-weight: 700; margin-bottom: 7rem; }
 
-.btn:hover, .btn:focus, .btn.focus { color: white; background-color: black; text-decoration: none; }
+.btn:hover, .btn.focus { color: white; background-color: black; text-decoration: none; }
+
+element.style { visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.2s ease 0s, opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.45s, transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.45s; }
+
+.btn-primary.active.focus, .btn-primary.active:hover, .btn-primary:active:hover, .open > .dropdown-toggle.btn-primary.focus, .open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover { background-color: black; text-decoration: none; color: white; }
 
 a:active, a:hover { outline: 0; }
 
@@ -100,6 +114,20 @@ a:active, a:hover { outline: 0; }
 
 body { background-color: #f5f5f5; }
 
-.text-who-we-are { padding-right: 10rem; padding-left: 10rem; font-size: 20px; }
+.text-who-we-are { padding-right: 2rem; padding-left: 2rem; font-size: 20px; }
+
+.image-about { width: 50vw; }
+
+.con-wwa { display: flex; justify-content: center; align-items: center; }
+
+.con-pink { background-color: #e9cacf; }
+
+.con-about-carousel { padding-top: 5rem; padding-bottom: 5rem; }
+
+.con-white { background: #ececec; }
+
+.col-wwa-left img { overflow: hidden; transition: all 0.4s ease; vertical-align: middle; }
+
+.col-wwa-left img:hover { border-radius: 10px; filter: blur(0.5px) brightness(105%) contrast(120%) opacity(95%) saturate(0.5); transform: scale(1.04); -ms-transform: scale(1.04); /* IE 9 */ -moz-transform: scale(1.04); /* Firefox */ -webkit-transform: scale(1.04); /* Safari and Chrome */ -o-transform: scale(1.04); /* Opera */ }
 
 /*# sourceMappingURL=styles.css.map */
