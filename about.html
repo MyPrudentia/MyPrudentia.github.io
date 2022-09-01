@@ -1,54 +1,100 @@
 ---
-layout: about
+layout: default
 title: Prudentia || About
 permalink: '/about'
 ---
 
 <div class="con-about">
   <header class="about-header-con">
-    <h1 class="about-prudentia-header">About Prudentia</h1>
-    <h2 class="about-heading-two">
-      <span class="text-auto">Are you ready to<br /></span>
-      <span class="auto-type"></span>
-    </h2>
-    <h3 class="about-heading-three">Welcome to Prudentia!</h3>
+    <div class="header-text">
+      <h1 class="about-prudentia-header">About Prudentia</h1>
+      <h2 class="about-heading-two">
+        <span class="text-auto">Are you ready to<br /></span>
+        <span class="auto-type"></span>
+      </h2>
+      <h3 class="about-heading-three">Welcome to Prudentia!</h3>
+    </div>
   </header>
-  <div class="container con-white">
-    <section class="who-we-are" id="who-we-are">
-      <h3 class="section-header">Who We Are</h3>
-      <p class="text-muted text-who-we-are">
-        Prudentia is one of the leading schools of its kind! Prudentia is a
-        nonprofit organization that is run entirely by students and has the goal
-        of providing students all around the world with access to a high-quality
-        education in computer science and finance at no cost.Our goal is to give
-        our students the skills, experience and confidence they need in order to
-        become successful professionals. Our program is flexible and our
-        teachers are the best in their field.
-      </p>
-      <a
-        href="#"
-        target="_blank"
-        class="btn btn-xl btn-primary btn-dark btn-contact"
-        >Contact Us To Learn More</a
-      >
-    </section>
+  <div class="con-white con-wwa">
+    <div class="wwa-image col-who-we-are col-wwa-left">
+      <img
+        class="image-about who-we-are-image"
+        src="/assets/images/who-we-are-image.jpg"
+        alt=""
+      />
+    </div>
+      <div col-who-we-are col-wwa-right">
+        <section class="who-we-are" id="who-we-are">
+          <h3 class="section-header">Who We Are</h3>
+          <p class="text-muted text-who-we-are">
+            Prudentia is one of the leading schools of its kind! Prudentia is a
+            nonprofit organization that is run entirely by students and has the
+            goal of providing students all around the world with access to a
+            high-quality education in computer science and finance at no cost.Our
+            goal is to give our students the skills, experience and confidence
+            they need in order to become successful professionals. Our program is
+            flexible and our teachers are the best in their field.
+          </p>
+          <a
+            href="#"
+            target="_blank"
+            class="btn btn-xl btn-primary btn-dark btn-contact btn-wwa"
+            >Contact Us To Learn More</a
+          >
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="con-pink con-about-carousel">
+    <div class="about-carousel">
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+      <div class="cell"><img src="/assets/images/aboutcell1.jpg" alt="" /></div>
+    </div>
   </div>
 </div>
 
-<!-- Auto-type code -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-  var typed = new Typed('.auto-type', {
+<!-- Flickity.js -->
+<script type="text/javascript">
+  $('.about-carousel').flickity({
+    // Options
+    cellAlign: 'left',
+    wrapAround: true,
+    freeScroll: true,
+  });
+</script>
+
+<!-- ScrollReveal.js -->
+<script type="text/javascript">
+  ScrollReveal({
+    reset: true,
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+  })
+
+  ScrollReveal().reveal('.header-text', { delay: 450, origin: 'top'})
+  ScrollReveal().reveal('.section-header, .btn-wwa, .btn-contact, .text-who-we-are', { delay: 450, origin: 'top'})
+  ScrollReveal().reveal('.who-we-are-image', { delay: 450, origin: 'top'})
+  ScrollReveal().reveal('.previous', { delay: 450, origin: 'right', disctance: '45px'})
+  ScrollReveal().reveal('.next', { delay: 450, origin: 'left', distance: '45px'})
+  ScrollReveal().reveal('.flickity-page-dots', { delay: 450, origin: 'bottom', distance: '65px'})
+  ScrollReveal().reveal('.cell', { delay: 450, origin: 'bottom', distance: '45px'})
+
+</script>
+
+<!-- Typed.js -->
+<script type="text/javascript">
+  var typed=new Typed('.auto-type', {
     strings: [
       'roll up your sleeves!',
-      'learn something new every day!',
-      'learn new skills and master them!',
+      'learn new skills!',
       'begin a new academic journey!',
-      'become a successful professional!',
-      'become experienced and be confident!',
     ],
-    typeSpeed: 40,
-    backSpeed: 40,
+    typeSpeed: 50,
+    backSpeed: 50,
     loop: true,
-  });
+  })
 </script>
